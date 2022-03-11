@@ -29,14 +29,14 @@ class Directory extends React.Component {
               {
                 title: 'womens',
                 imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-                //size: 'large',
+                size: 'large', //changes the size of the image, must be passed into the component
                 id: 4,
                 //linkUrl: 'shop/womens'
               },
               {
                 title: 'mens',
                 imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-                //size: 'large',
+                size: 'large',
                 id: 5,
                 //linkUrl: 'shop/mens'
               }]
@@ -46,8 +46,8 @@ class Directory extends React.Component {
         return (
             <div className='directory-menu'>
                 {
-                    this.state.sections.map(({title, imageUrl, id}) => (  //destructure to get all props from item
-                        <MenuItem key={id} title={title} imageUrl={imageUrl} />
+                    this.state.sections.map(({title, imageUrl, id, size}) => (  //destructure to get all props from item
+                        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} />
                     ))
                 }
             </div>    

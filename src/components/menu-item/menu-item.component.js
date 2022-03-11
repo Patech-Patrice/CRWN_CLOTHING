@@ -1,10 +1,11 @@
 import React from 'react';
 import './menu-item.styles.scss';
 
-const MenuItem = ({ title, imageUrl }) => ( //destructed prop to dynamically generate title
+const MenuItem = ({ title, imageUrl, size }) => ( //destructed prop to dynamically generate title
 <div  style={{
     backgroundImage: `url(${imageUrl})`
-}}className='menu-item'>
+}}
+className={`${size} menu-item`}>
     <div className='content'>
         <h1 className='title'>{title}</h1>
         <span className='subtitle'>SHOP NOW</span>    
